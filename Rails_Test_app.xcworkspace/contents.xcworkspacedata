@@ -16,6 +16,9 @@
       location = "container:"
       name = "Controllers">
       <FileRef
+         location = "group:app/controllers/partners_controller.rb">
+      </FileRef>
+      <FileRef
          location = "group:app/controllers/welcome_controller.rb">
       </FileRef>
    </Group>
@@ -29,12 +32,27 @@
    <Group
       location = "container:"
       name = "Views">
-      <FileRef
-         location = "group:app/views/welcome/index.html.erb">
-      </FileRef>
-      <FileRef
-         location = "group:app/views/layouts/application.html.erb">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "Templates">
+         <FileRef
+            location = "group:app/views/layouts/application.html.erb">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Welcome">
+         <FileRef
+            location = "group:app/views/welcome/index.html.erb">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Partners">
+         <FileRef
+            location = "group:app/views/partners/new.html.erb">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "group:config/routes.rb">

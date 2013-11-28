@@ -3,5 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     background: #34495e;
-    color: #e8edf2;
+    color: #10161d;
+    background-image:url('brickwall.png');
+}
+
+nav {
+    background: #1e2b37;
+    opacity:0.4;
+    transition: opacity 1s ease;
+}
+
+nav:hover {
+    background: #1e2b37;
+    opacity:0.9;
+}
+
+a {
+    color: #eef2f5;
+}
+a:hover {
+    color: #85a0bb;
 }
