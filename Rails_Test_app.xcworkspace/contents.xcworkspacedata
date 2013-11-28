@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Helpers">
+      <FileRef
+         location = "group:app/helpers/welcome_helper.rb">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Models">
+   </Group>
+   <Group
+      location = "container:"
+      name = "Controllers">
+      <FileRef
+         location = "group:app/controllers/welcome_controller.rb">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "CSS">
+      <FileRef
+         location = "group:app/assets/stylesheets/welcome.css.scss">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Views">
+      <FileRef
+         location = "group:app/views/welcome/index.html.erb">
+      </FileRef>
+      <FileRef
+         location = "group:app/views/layouts/application.html.erb">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:config/routes.rb">
+   </FileRef>
+</Workspace>
