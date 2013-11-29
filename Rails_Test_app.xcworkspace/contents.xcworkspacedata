@@ -3,6 +3,36 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Config">
+      <FileRef
+         location = "group:config/application.rb">
+      </FileRef>
+      <FileRef
+         location = "group:config/boot.rb">
+      </FileRef>
+      <FileRef
+         location = "group:config/database.yml">
+      </FileRef>
+      <FileRef
+         location = "group:config/environment.rb">
+      </FileRef>
+      <FileRef
+         location = "group:config/routes.rb">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "DB">
+      <Group
+         location = "container:"
+         name = "Migrations">
+         <FileRef
+            location = "group:db/migrate/20131129022111_create_partners.rb">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
       name = "Helpers">
       <FileRef
          location = "group:app/helpers/welcome_helper.rb">
@@ -25,6 +55,12 @@
    <Group
       location = "container:"
       name = "CSS">
+      <FileRef
+         location = "group:app/assets/stylesheets/application.css">
+      </FileRef>
+      <FileRef
+         location = "group:app/assets/stylesheets/partners.css.scss">
+      </FileRef>
       <FileRef
          location = "group:app/assets/stylesheets/welcome.css.scss">
       </FileRef>
@@ -50,11 +86,14 @@
          location = "container:"
          name = "Partners">
          <FileRef
+            location = "group:app/views/partners/index.html.erb">
+         </FileRef>
+         <FileRef
+            location = "group:app/views/partners/show.html.erb">
+         </FileRef>
+         <FileRef
             location = "group:app/views/partners/new.html.erb">
          </FileRef>
       </Group>
    </Group>
-   <FileRef
-      location = "group:config/routes.rb">
-   </FileRef>
 </Workspace>

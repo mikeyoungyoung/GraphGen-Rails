@@ -18,9 +18,13 @@ nav:hover {
     opacity:0.9;
 }
 
-a {
+nav a {
     color: #eef2f5;
 }
-a:hover {
+nav a:hover {
     color: #85a0bb;
+}
+
+a {
+    color: black;
 }
