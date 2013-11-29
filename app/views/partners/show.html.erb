@@ -1,10 +1,16 @@
 <p>
-  <strong>Name_first:</strong>
+  <strong>First Name:</strong>
   <%= @partner.name_first %>
 </p>
- 
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @partner.name_last %>
+</p>
+
 <p>
   <strong>Email:</strong>
   <%= @partner.email %>
 </p>
 <%= link_to 'Back', partners_path %>
+| <%= link_to 'Edit', edit_partner_path(@partner) %>

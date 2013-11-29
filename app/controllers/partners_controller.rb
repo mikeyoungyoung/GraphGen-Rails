@@ -4,17 +4,42 @@ class PartnersController < ApplicationController
     end
     
     def new
+        @partner = Partner.new
     end
     
     def create
         @partner = Partner.new(post_params)
         
-        @partner.save
-        redirect_to @partner
+        if @partner.save
+            redirect_to @partner
+        else
+            render 'new'
+        end
     end
     
     def show
         @partner = Partner.find(params[:id])
+    end
+    
+    def edit
+        @partner = Partner.find(params[:id])
+    end
+    
+    def update
+        @partner = Partner.find(params[:id])
+        
+        if @partner.update(params[:partner].permit(:name_first, :name_last, :email))
+            redirect_to @partner
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @partner = Partner.find(params[:id])
+        @partner.destroy
+        
+        redirect_to partners_path
     end
     
     private
