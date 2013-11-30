@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129022111) do
+ActiveRecord::Schema.define(version: 20131130134944) do
+
+  create_table "offices", force: true do |t|
+    t.string   "street"
+    t.integer  "number"
+    t.string   "city"
+    t.string   "postal_code"
+    t.integer  "partner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "offices", ["partner_id"], name: "index_offices_on_partner_id"
 
   create_table "partners", force: true do |t|
     t.string   "name_first"

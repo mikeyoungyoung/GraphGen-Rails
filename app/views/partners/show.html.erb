@@ -12,5 +12,21 @@
   <strong>Email:</strong>
   <%= @partner.email %>
 </p>
+
+<h2>Add an Officet:</h2>
+<%= form_for([@partner, @partner.offices.build]) do |f| %>
+  <p>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Back', partners_path %>
 | <%= link_to 'Edit', edit_partner_path(@partner) %>

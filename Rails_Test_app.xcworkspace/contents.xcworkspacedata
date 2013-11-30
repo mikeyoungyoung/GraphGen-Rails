@@ -27,6 +27,9 @@
          location = "container:"
          name = "Migrations">
          <FileRef
+            location = "group:db/migrate/20131130134944_create_offices.rb">
+         </FileRef>
+         <FileRef
             location = "group:db/migrate/20131129022111_create_partners.rb">
          </FileRef>
       </Group>
@@ -41,6 +44,9 @@
    <Group
       location = "container:"
       name = "Models">
+      <FileRef
+         location = "group:app/models/office.rb">
+      </FileRef>
       <FileRef
          location = "group:app/models/partner.rb">
       </FileRef>
