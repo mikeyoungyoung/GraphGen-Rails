@@ -1,0 +1,13 @@
+<p>
+  <strong>City:</strong>
+  <%= office.city %>
+</p>
+ 
+<p>
+  <strong>Street:</strong>
+  <%= "#{office.number} #{office.street}" %>
+<p>
+  <%= link_to 'Remove Office', [office.partner, office],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

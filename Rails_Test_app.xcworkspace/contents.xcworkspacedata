@@ -82,6 +82,16 @@
       name = "Views">
       <Group
          location = "container:"
+         name = "Offices">
+         <FileRef
+            location = "group:app/views/offices/_form.html.erb">
+         </FileRef>
+         <FileRef
+            location = "group:app/views/offices/_office.html.erb">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Templates">
          <FileRef
             location = "group:app/views/layouts/application.html.erb">
