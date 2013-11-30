@@ -55,6 +55,9 @@
       location = "container:"
       name = "Controllers">
       <FileRef
+         location = "group:app/controllers/offices_controller.rb">
+      </FileRef>
+      <FileRef
          location = "group:app/controllers/partners_controller.rb">
       </FileRef>
       <FileRef

@@ -13,15 +13,36 @@
   <%= @partner.email %>
 </p>
 
-<h2>Add an Officet:</h2>
+<h2>Offices</h2>
+<% @partner.offices.each do |office| %>
+  <p>
+    <strong>City:</strong>
+    <%= office.city %>
+  </p>
+ 
+  <p>
+    <strong>Street:</strong>
+    <%= "#{office.number} #{office.street}" %>
+  </p>
+<% end %>
+
+<h2>Add an Office:</h2>
 <%= form_for([@partner, @partner.offices.build]) do |f| %>
   <p>
     <%= f.label :street %><br />
     <%= f.text_field :street %>
   </p>
+    <p>
+    <%= f.label :number %><br />
+    <%= f.number_field :number %>
+  </p>
   <p>
     <%= f.label :city %><br />
     <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :postal_code %><br />
+    <%= f.text_field :postal_code %>
   </p>
   <p>
     <%= f.submit %>
