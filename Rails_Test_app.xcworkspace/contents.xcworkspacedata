@@ -84,6 +84,12 @@
          location = "container:"
          name = "Offices">
          <FileRef
+            location = "group:app/views/offices/show.html.erb">
+         </FileRef>
+         <FileRef
+            location = "group:app/views/offices/index.html.erb">
+         </FileRef>
+         <FileRef
             location = "group:app/views/offices/_form.html.erb">
          </FileRef>
          <FileRef

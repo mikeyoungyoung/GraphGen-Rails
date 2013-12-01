@@ -1,0 +1,21 @@
+<h1>Offices</h1>
+<%= link_to "Welcome", controller: "welcome" %>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Number</th>
+    <th>Street</th>
+  </tr>
+ 
+ 
+</table>
+
+<h2>Offices</h2>
+<% @offices.each do |office| %>
+  <tr>
+      <td><%= office.city %></td>
+      <td><%= office.number %></td>
+      <td><%= office.street %></td>
+  </tr>
+<% end %>

@@ -1,4 +1,7 @@
 class PartnersController < ApplicationController
+    #authorization
+    http_basic_authenticate_with name: "mw2young", password: "Welcome1", except: [:index, :show]
+    
     def index
         @partners = Partner.all
     end

@@ -13,10 +13,13 @@
   <%= @partner.email %>
 </p>
 
+<%= link_to 'All', partner_offices_path(@partner) %>
+
 <h2>Offices</h2>
 <%= render @partner.offices %>
 <h2>Add an Office:</h2>
 <%= render "offices/form" %>
+<p> Show all offices</p>
 
 <%= link_to 'Back', partners_path %>
 | <%= link_to 'Edit', edit_partner_path(@partner) %>
